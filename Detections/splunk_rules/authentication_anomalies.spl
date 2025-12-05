@@ -1,0 +1,7 @@
+# Authentication Anomalies - Brute Force
+# Detects 10+ failed logins from the same IP within 5 minutes
+
+index=windows LogName=Security EventCode=4625
+| stats count by IpAddress, TargetUserName
+| where count > 10
+| sort - count

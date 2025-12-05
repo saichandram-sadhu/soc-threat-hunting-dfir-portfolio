@@ -1,0 +1,22 @@
+title: PowerShell Base64 Encoded Command
+id: 1f21ec3f-810d-4b0e-8045-322205e22918
+status: experimental
+description: Detects PowerShell execution with Base64 encoded commands, often used to obfuscate payloads.
+author: Saichandram Sadhu
+date: 2023/10/20
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\powershell.exe'
+        CommandLine|contains:
+            - '-EncodedCommand'
+            - '-enc'
+    condition: selection
+falsepositives:
+    - Legitimate admin scripts using encoding (rare)
+level: medium
+tags:
+    - attack.execution
+    - attack.t1059.001

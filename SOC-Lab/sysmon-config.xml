@@ -1,0 +1,22 @@
+<Sysmon schemaversion="4.82">
+  <!-- Capture Process Creation -->
+  <EventFiltering>
+    <RuleGroup name="" groupRelation="or">
+      <ProcessCreate onmatch="exclude">
+        <Image condition="end with">chrome.exe</Image>
+      </ProcessCreate>
+      <ProcessCreate onmatch="include">
+        <CommandLine condition="contains">powershell</CommandLine>
+        <CommandLine condition="contains">cmd.exe</CommandLine>
+      </ProcessCreate>
+    </RuleGroup>
+    
+    <!-- Capture Network Connections -->
+    <RuleGroup name="" groupRelation="or">
+      <NetworkConnect onmatch="include">
+        <DestinationPort condition="is">445</DestinationPort> <!-- SMB -->
+        <DestinationPort condition="is">3389</DestinationPort> <!-- RDP -->
+      </NetworkConnect>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>

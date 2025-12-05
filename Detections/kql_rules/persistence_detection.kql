@@ -1,0 +1,7 @@
+// Persistence via Registry Run Keys
+// Detects changes to the 'Run' or 'RunOnce' registry keys
+DeviceRegistryEvents
+| where ActionType == "RegistryValueSet"
+| where RegistryKey has "Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+| where InitiatingProcessFileName !in ("msiexec.exe", "onedrive.exe")
+| project Timestamp, DeviceName, InitiatingProcessFileName, RegistryKey, RegistryValueData

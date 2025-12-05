@@ -1,0 +1,18 @@
+# Volatility 3 Cheat Sheet
+
+## Info & Processes
+python3 vol.py -f image.mem windows.info
+python3 vol.py -f image.mem windows.pslist
+python3 vol.py -f image.mem windows.psscan
+python3 vol.py -f image.mem windows.pstree
+
+## Network
+python3 vol.py -f image.mem windows.netscan
+
+## Code Injection & Malware
+python3 vol.py -f image.mem windows.malfind
+python3 vol.py -f image.mem windows.ldrmodules
+
+## Files & Registry
+python3 vol.py -f image.mem windows.filescan
+python3 vol.py -f image.mem windows.registry.hivelist

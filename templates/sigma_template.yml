@@ -1,0 +1,16 @@
+title: [Rule Title]
+id: [UUID]
+status: experimental
+description: [Description]
+author: [Name]
+date: 2023/01/01
+logsource:
+    category: [category]
+    product: [product]
+detection:
+    selection:
+        Field: Value
+    condition: selection
+level: medium
+tags:
+    - attack.tXXXX
