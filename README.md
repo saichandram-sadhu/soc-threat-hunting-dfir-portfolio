@@ -107,8 +107,8 @@ I am actively deepening my expertise in **Digital Forensics & Incident Response 
 
 ## 📬 Contact
 
-*   📧 **Email**: [YourEmail@example.com](mailto:YourEmail@example.com)
-*   🐙 **GitHub**: [github.com/saichandram](https://github.com/saichandram)
-*   💼 **LinkedIn**: [linkedin.com/in/saichandram](https://linkedin.com/in/saichandram)
+*   📧 **Email**: [YourEmail@example.com](mailto:saichandram.sadhu.it@gmail.com)
+*   🐙 **GitHub**: [github.com/saichandram](https://github.com/saichandram-sadhu)
+*   💼 **LinkedIn**: [linkedin.com/in/saichandram](www.linkedin.com/in/saichandram-sadhu-9980a2357)
 
 ---
